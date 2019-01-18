@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Introduction View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="CalorieTool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ca2-NG-vnH">
+                                <rect key="frame" x="37" y="218" width="301" height="231"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bPK-As-4qu">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="175"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="0.3044734589041096" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="301" id="WUc-kv-Xot"/>
+                                            <constraint firstAttribute="height" constant="175" id="cmO-pR-zBx"/>
+                                        </constraints>
+                                        <string key="text">This tool utilizes the Harris Benedict equation and the approximate caloric value of a single pound of body mass to determine a daily caloric surplus or deficit to accomplish your body composition goals.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9En-cN-a9O" customClass="RoundedButton" customModule="CalorieTool" customModuleProvider="target">
+                                        <rect key="frame" x="85.5" y="197" width="130" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="1Dq-Wh-YVo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="BEGIN">
+                                            <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Swp-DU-TZB" kind="presentation" id="A35-DO-EBd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ca2-NG-vnH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pdn-F1-MTs"/>
+                            <constraint firstItem="Ca2-NG-vnH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pqG-QX-f5o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="beginButton" destination="9En-cN-a9O" id="Rfc-St-dK1"/>
+                        <outlet property="introTextView" destination="bPK-As-4qu" id="0lT-Xp-etV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="132.68365817091455"/>
+        </scene>
+        <!--Basal Metabolic Rate-->
+        <scene sceneID="Aso-di-3b5">
+            <objects>
+                <viewController id="Tnb-hN-Mey" customClass="QuestionViewController" customModule="CalorieTool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q9c-Ga-GHO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="4Ov-ns-QYn">
+                                <rect key="frame" x="16" y="144" width="343" height="435"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n OF m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZT-j4-6EP">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you weigh?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBK-8B-ohW">
+                                        <rect key="frame" x="0.0" y="25.5" width="343" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5hX-o1-kud" userLabel="rangedStackView">
+                                        <rect key="frame" x="0.0" y="63" width="343" height="98"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NfB-tJ-pXX">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="76.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwe-en-gQV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="38.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="52" translatesAutoresizingMaskIntoConstraints="NO" id="edg-90-9Wm">
+                                                        <rect key="frame" x="-2" y="46.5" width="347" height="31"/>
+                                                        <color key="minimumTrackTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="rangedAnswerButtonPressed:" destination="Tnb-hN-Mey" eventType="valueChanged" id="4wf-Cf-07w"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="month(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccJ-ZM-e28">
+                                                <rect key="frame" x="132.5" y="76.5" width="78" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="NfB-tJ-pXX" secondAttribute="trailing" id="ZJQ-Vu-8gN"/>
+                                            <constraint firstItem="NfB-tJ-pXX" firstAttribute="leading" secondItem="5hX-o1-kud" secondAttribute="leading" id="fBE-kG-MSK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="oeQ-uX-DK3" userLabel="singleStackView">
+                                        <rect key="frame" x="0.0" y="172" width="343" height="214"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOr-uU-ZEC" customClass="RoundedButton" customModule="CalorieTool" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Option">
+                                                    <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="singleButtonPressed:" destination="Tnb-hN-Mey" eventType="touchUpInside" id="uQ4-SG-gwz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OK4-St-E7p" customClass="RoundedButton" customModule="CalorieTool" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="45" width="343" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Option">
+                                                    <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="singleButtonPressed:" destination="Tnb-hN-Mey" eventType="touchUpInside" id="UHR-kw-Jmf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjy-Im-Mj0" customClass="RoundedButton" customModule="CalorieTool" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="90" width="343" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Option">
+                                                    <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="singleButtonPressed:" destination="Tnb-hN-Mey" eventType="touchUpInside" id="NxW-NZ-uhe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvo-Th-TwD" customClass="RoundedButton" customModule="CalorieTool" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="135" width="343" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Option">
+                                                    <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="singleButtonPressed:" destination="Tnb-hN-Mey" eventType="touchUpInside" id="IBK-HC-kQ1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icc-AC-s6J" customClass="RoundedButton" customModule="CalorieTool" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="180" width="343" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Option">
+                                                    <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="singleButtonPressed:" destination="Tnb-hN-Mey" eventType="touchUpInside" id="0Jb-Fy-Ys4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y6V-n9-hUn" userLabel="inputStackView">
+                                        <rect key="frame" x="0.0" y="397" width="343" height="38"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="160" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5t-Tu-kHI">
+                                                <rect key="frame" x="0.0" y="4" width="284.5" height="30"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pounds" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3s-bk-C83">
+                                                <rect key="frame" x="292.5" y="10.5" width="50.5" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="HUU-BW-tDN"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="y6V-n9-hUn" secondAttribute="trailing" id="dNQ-c4-Ahe"/>
+                                    <constraint firstItem="y6V-n9-hUn" firstAttribute="leading" secondItem="4Ov-ns-QYn" secondAttribute="leading" id="hes-4K-R25"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iN-bI-AaX" customClass="RoundedButton" customModule="CalorieTool" customModuleProvider="target">
+                                <rect key="frame" x="32" y="554" width="311" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextQuestionButtonPressed:" destination="Tnb-hN-Mey" eventType="touchUpInside" id="8LA-ke-Qtv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TDi-lR-6rJ" firstAttribute="trailing" secondItem="4Ov-ns-QYn" secondAttribute="trailing" constant="16" id="Dhs-Wc-sMs"/>
+                            <constraint firstItem="TDi-lR-6rJ" firstAttribute="bottom" secondItem="1iN-bI-AaX" secondAttribute="bottom" constant="80" id="Jpp-Ju-adA"/>
+                            <constraint firstItem="4Ov-ns-QYn" firstAttribute="top" secondItem="TDi-lR-6rJ" secondAttribute="top" constant="80" id="OBZ-gX-9HM"/>
+                            <constraint firstItem="4Ov-ns-QYn" firstAttribute="leading" secondItem="TDi-lR-6rJ" secondAttribute="leading" constant="16" id="SN6-a0-9jO"/>
+                            <constraint firstItem="TDi-lR-6rJ" firstAttribute="trailing" secondItem="1iN-bI-AaX" secondAttribute="trailing" constant="32" id="jmS-cU-2aM"/>
+                            <constraint firstItem="1iN-bI-AaX" firstAttribute="leading" secondItem="TDi-lR-6rJ" secondAttribute="leading" constant="32" id="ks4-7B-koX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TDi-lR-6rJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Basal Metabolic Rate" id="G7Y-hg-B3X"/>
+                    <connections>
+                        <outlet property="answerTextField" destination="C5t-Tu-kHI" id="ypb-eZ-Xcc"/>
+                        <outlet property="inputAccessoryLabel" destination="F3s-bk-C83" id="caj-NI-bf4"/>
+                        <outlet property="inputStackView" destination="y6V-n9-hUn" id="fR4-M7-1sj"/>
+                        <outlet property="nextButton" destination="1iN-bI-AaX" id="Lka-sC-Hxe"/>
+                        <outlet property="questionCountLabel" destination="JZT-j4-6EP" id="XXE-OZ-m0B"/>
+                        <outlet property="questionTitleLabel" destination="mBK-8B-ohW" id="1T2-QR-Akn"/>
+                        <outlet property="rangedAccessoryLabel" destination="ccJ-ZM-e28" id="0hK-nI-XaH"/>
+                        <outlet property="rangedInputLabel" destination="Xwe-en-gQV" id="hBn-I4-0PI"/>
+                        <outlet property="rangedSlider" destination="edg-90-9Wm" id="30x-Fw-CPw"/>
+                        <outlet property="rangedStackView" destination="5hX-o1-kud" id="pB9-ss-jPm"/>
+                        <outlet property="singleButtonA" destination="MOr-uU-ZEC" id="U2x-Ak-tuE"/>
+                        <outlet property="singleButtonB" destination="OK4-St-E7p" id="Z4D-EK-kRl"/>
+                        <outlet property="singleButtonC" destination="Pjy-Im-Mj0" id="fA7-5y-0zZ"/>
+                        <outlet property="singleButtonD" destination="Pvo-Th-TwD" id="ueW-LS-oag"/>
+                        <outlet property="singleButtonE" destination="Icc-AC-s6J" id="CzT-dY-xu2"/>
+                        <outlet property="singleStackView" destination="oeQ-uX-DK3" id="wXz-W2-V4v"/>
+                        <outletCollection property="singleButtons" destination="MOr-uU-ZEC" collectionClass="NSMutableArray" id="O7l-5f-yMK"/>
+                        <outletCollection property="singleButtons" destination="OK4-St-E7p" collectionClass="NSMutableArray" id="fAj-IY-UWE"/>
+                        <outletCollection property="singleButtons" destination="Pjy-Im-Mj0" collectionClass="NSMutableArray" id="h0C-11-gTb"/>
+                        <outletCollection property="singleButtons" destination="Pvo-Th-TwD" collectionClass="NSMutableArray" id="fTU-eY-fcT"/>
+                        <outletCollection property="singleButtons" destination="Icc-AC-s6J" collectionClass="NSMutableArray" id="e76-B9-xhu"/>
+                        <segue destination="Hf6-N6-lR1" kind="show" identifier="ResultsSegue" id="cMl-fN-NWm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXe-cx-ooc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696.8" y="132.68365817091455"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="iym-ga-r4Q">
+            <objects>
+                <viewController id="Hf6-N6-lR1" customClass="ResultsViewController" customModule="CalorieTool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zW8-bA-Kuh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1dS-aj-0qs">
+                                <rect key="frame" x="16" y="260.5" width="343" height="146.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iot-BZ-b79">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="26.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your BMR is " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtS-3e-oad">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000.0 cals" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raz-Ip-njN">
+                                                <rect key="frame" x="175.5" y="0.0" width="167.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XDi-n6-vEY">
+                                        <rect key="frame" x="0.0" y="34.5" width="343" height="26.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maintenance is " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFw-KI-5Ie">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000.0 cals" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFr-Ri-80v">
+                                                <rect key="frame" x="175.5" y="0.0" width="167.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZUL-5A-cVa">
+                                        <rect key="frame" x="0.0" y="69" width="343" height="26.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target is " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nek-T1-Mmo">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000.0 cals" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cva-xw-pVQ">
+                                                <rect key="frame" x="175.5" y="0.0" width="167.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To lose 8 pounds in 12 weeks you will need to eat a deficit of 500 calories." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdc-hx-juV">
+                                        <rect key="frame" x="0.0" y="103.5" width="343" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1dS-aj-0qs" secondAttribute="trailing" constant="16" id="6ZQ-te-mYt"/>
+                            <constraint firstItem="1dS-aj-0qs" firstAttribute="centerY" secondItem="zW8-bA-Kuh" secondAttribute="centerY" id="ERA-3e-t8N"/>
+                            <constraint firstItem="1dS-aj-0qs" firstAttribute="centerX" secondItem="zW8-bA-Kuh" secondAttribute="centerX" id="gaW-0M-L08"/>
+                            <constraint firstItem="1dS-aj-0qs" firstAttribute="leading" secondItem="zW8-bA-Kuh" secondAttribute="leading" constant="16" id="tyU-uf-Iem"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nZF-PX-r5f"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Results" id="DMw-fe-38b">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Crm-yD-0ob">
+                            <connections>
+                                <segue destination="P9c-Ge-50m" kind="unwind" unwindAction="unwindToIntroductionWithUnwindSegue:" id="zKo-lT-vDV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bmrLabel" destination="raz-Ip-njN" id="Ejo-Tq-hk1"/>
+                        <outlet property="descriptionLabel" destination="Pdc-hx-juV" id="WCU-q3-1Xs"/>
+                        <outlet property="maintenanceLabel" destination="GFr-Ri-80v" id="fps-cE-5DK"/>
+                        <outlet property="targetLabel" destination="cva-xw-pVQ" id="jJl-pY-FRm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZG-GS-kQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="P9c-Ge-50m" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2593" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fJa-oH-qLP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Swp-DU-TZB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ktp-g8-FBN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tnb-hN-Mey" kind="relationship" relationship="rootViewController" id="1Dp-2U-fem"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIY-Ke-pgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="-203"/>
+        </scene>
+    </scenes>
+</document>
