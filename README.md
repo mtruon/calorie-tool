@@ -7,6 +7,9 @@ Extended the personality quiz into a calorie tool to determine how many calories
 ![Screenshot](/Resources/options.png)
 ![Screenshot](/Resources/slider.png)
 ![Screenshot](/Resources/results.png)
+
+<img src="/Resources/input.png" width="50%">
+
 * Learned to use segues
 * Created a login flow that was based on the light switch
 * Used extensions to do an underline text field
