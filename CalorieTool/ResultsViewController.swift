@@ -43,12 +43,13 @@ class ResultsViewController: UIViewController {
         }
         
         let maintenanceCalories = bmr! * activity
-        let caloricDailyGoal = (onePoundCalories * target)/(weeks * 7)
+        let goalMultiplier = responses[5].value
+        let caloricDailyGoal = goalMultiplier * (onePoundCalories * target)/(weeks * 7)
         
         bmrLabel.text = "\(bmr!) cals"
         maintenanceLabel.text = "\(maintenanceCalories) cals"
-        targetLabel.text = "\(maintenanceCalories - caloricDailyGoal) cals"
-        descriptionLabel.text = goal == "Lose" ? "To \(goal) \(Int(target)) lbs in \(Int(weeks)) weeks you will need to eat at a deficit of \(Int(caloricDailyGoal)) cals" : "To \(goal) \(Int(target)) lbs in \(Int(weeks)) weeks you will need to eat at a surplus of \(Int(caloricDailyGoal)) cals"
+        targetLabel.text = "\(maintenanceCalories + caloricDailyGoal) cals"
+        descriptionLabel.text = goal == "Lose" ? "To \(goal) \(Int(target)) lbs in \(Int(weeks)) weeks you will need to eat at a deficit of \(Int(caloricDailyGoal)) cals" : "To \(goal) \(Int(target)) lbs in \(Int(weeks)) weeks you will need to eat at a surplus of \(Int(caloricDailyGoal * goalMultiplier)) cals"
     
     }
     

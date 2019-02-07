@@ -58,7 +58,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         Question(text: "What is your weight-oriented goal?",
                  type: .single,
                  answers: [Answer(text: "Gain", value: 1),
-                           Answer(text: "Lose", value: 0)]),
+                           Answer(text: "Lose", value: -1)]),
         Question(text: "How many pounds?",
                  type: .ranged,
                  answers: [Answer(text: "lbs", value: 0)]),
